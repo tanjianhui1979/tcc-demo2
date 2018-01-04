@@ -1,0 +1,29 @@
+
+spring:
+### jta相关参数配置
+  jta:
+    transaction-manager-id: txManager
+    log-dir: D:/logs/spring-boot-distributed-transaction/jta
+    atomikos:
+      properties:
+        transaction-manager-unique-name: txManager
+        log-base-dir: D:/logs/spring-boot-distributed-transaction/
+
+
+### mybatis
+mybatis:
+  type-aliases-package: com.example.tccdemo2.domain
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*/*.xml
+### pagehelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+### logging
+logging:
+  file: D:/logs/spring-boot-distributed-transaction/dt
+
+management:
+  security:
+    enabled: false
+

@@ -1,0 +1,28 @@
+spring:
+### profile
+  profiles:
+    active: dev
+### http encoding
+  http:
+    encoding:
+      force: true
+      force-request: true
+      force-response: true
+### ansi
+  output:
+      ansi:
+        enabled: always
+
+### mybatis
+mybatis:
+  type-aliases-package: com.example.tccdemo2.domain
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*/*.xml
+### pagehelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+
+
+
+
